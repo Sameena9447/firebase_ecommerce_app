@@ -15,7 +15,6 @@ class ProductModel extends StatefulWidget {
 class _ProductModelState extends State<ProductModel> {
   @override
   Widget build(BuildContext context) {
-    // var onSale = widget.products['discount'];
     return InkWell(
       onTap: () {
         Navigator.push(

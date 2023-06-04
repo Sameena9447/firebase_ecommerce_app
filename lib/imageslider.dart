@@ -41,13 +41,11 @@ class LmsCarousel extends StatelessWidget {
               ),
             );
           },
-          // slideTransform: ,
           slideIndicator: CircularSlideIndicator(
             itemSpacing: 20,
             indicatorRadius: 6,
             indicatorBorderWidth: 1,
             currentIndicatorColor: Color.fromARGB(255, 6, 102, 56),
-            //  indicatorBorderColor: Colors.grey,
             indicatorBackgroundColor: Colors.grey,
             padding: EdgeInsets.only(bottom: 30),
           ),

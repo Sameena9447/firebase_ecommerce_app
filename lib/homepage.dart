@@ -33,7 +33,6 @@ class HomePage extends StatelessWidget {
               'assets/images/logo.jpg',
             ),
             width: 160,
-            //  height: 80,
           ),
         ),
         actions: [
@@ -158,7 +157,6 @@ class HomePage extends StatelessWidget {
                     .snapshots(),
                 builder: (BuildContext context,
                     AsyncSnapshot<QuerySnapshot> snapshot) {
-                  // log("length ===" + snapshot.data!.docs.length.toString());
                   if (snapshot.hasError) {
                     log(snapshot.error.toString());
                     return Text(
@@ -187,7 +185,6 @@ class HomePage extends StatelessWidget {
 
                   return StaggeredGridView.countBuilder(
                       scrollDirection: Axis.horizontal,
-                      // physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: snapshot.data!.docs.length,
                       crossAxisCount: 2,
@@ -198,9 +195,7 @@ class HomePage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        //  SampleBody(proList: widget.products),
-                                        ViewPorducts(
+                                    builder: (context) => ViewPorducts(
                                           catname: snapshot.data!.docs[index]
                                               ['catname'],
                                           catid: snapshot.data!.docs[index]
@@ -214,7 +209,6 @@ class HomePage extends StatelessWidget {
                                 Container(
                                   decoration: BoxDecoration(
                                       border: Border.all(color: Colors.grey),
-                                      //  color: Colors.transparent,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10))),
                                   child: ClipRRect(
@@ -293,15 +287,12 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                // height: double.infi
-                // color: Colors.amber,
                 child: StreamBuilder<QuerySnapshot>(
                   stream: FirebaseFirestore.instance
                       .collection('brands')
                       .snapshots(),
                   builder: (BuildContext context,
                       AsyncSnapshot<QuerySnapshot> snapshot) {
-                    // log("length ===" + snapshot.data!.docs.length.toString());
                     if (snapshot.hasError) {
                       log(snapshot.error.toString());
                       return Text(

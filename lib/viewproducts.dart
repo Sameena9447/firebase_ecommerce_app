@@ -50,7 +50,6 @@ class ViewPorducts extends StatelessWidget {
                   .snapshots(),
               builder: (BuildContext context,
                   AsyncSnapshot<QuerySnapshot> snapshot) {
-                // log("length ===" + snapshot.data!.docs.length.toString());
                 if (snapshot.hasError) {
                   log(snapshot.error.toString());
                   return Text(

@@ -17,9 +17,7 @@ class BottumNavigationPage extends StatelessWidget {
         unselectedItemColor: Colors.grey,
         selectedFontSize: 14,
         unselectedFontSize: 14,
-        onTap: (value) {
-          // Respond to item press.
-        },
+        onTap: (value) {},
         items: [
           BottomNavigationBarItem(
             label: 'Home',
